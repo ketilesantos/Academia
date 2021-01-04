@@ -1,0 +1,13 @@
+{
+  "instructors": [
+    {
+      "id": 1,
+      "avatar_url": "https://google.com",
+      "name": "  Luisa Marcela",
+      "birth": 484531200000,
+      "gender": "F",
+      "services": "  Natação, Musculação",
+      "create_at": 1609770203858
+    }
+  ]
+}

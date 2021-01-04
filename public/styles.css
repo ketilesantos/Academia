@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root{
+  --primary-color: #7159c1;
+  --secondary-color: #F7DF1E;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: var(--primary-color);
+  font-family: 'Roboto', sans-serif;
+}
+
+header{
+  background-color: white;
+  padding:28px;
+  width:100%;
+  text-align: center;
+}
+
+.links {
+  font-size: 20px;
+}
+
+.links a + a {
+  margin-left: 32px;
+}
+
+.links a {
+  text-decoration:none;
+  position: relative;
+  color: #777;
+}
+
+.links a.active{
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.links a:hover{
+  color: var(--primary-color);
+}
+
+
+.links a::after{
+  content: "";
+  width:0;
+  height:2px;
+  background-color: var(--primary-color);
+  position: absolute;
+  left: 0;
+  bottom:-4px;
+}
+
+.links a:hover::after{
+  width:100%;
+  transition: width 300ms ease-in-out; 
+}
+
+/* === CARD === */
+
+.card{
+  background-color:white;
+  width:800px;
+  min-height: 400px;
+  margin: 50px auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  box-shadow: 0px 2px 6px 1px rgba(0,0,0, 0.5);
+
+  animation: up 200ms ease;
+}
+
+@keyframes up {
+  from {
+    opacity: 0;
+    transform: translateY(15px)
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* === Details === */
+
+.details{
+  padding: 32px;
+}
+
+.details .item{
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 16px 0;
+}
+
+.details .item:last-child{
+  border:none;
+}
+
+.details h3,
+.details .item div:nth-child(1){
+  font-size:14px;
+  line-height: 24px;
+  color: #777;
+  letter-spacing:0.7px;
+  font-weight:normal;
+}
+.details .item div:nth-child(2){
+  color: #555;
+  font-weight: bold;
+  font-size:18px;
+}
+
+.details h3{
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.details .item span{
+  padding: 8px 16px;
+  background-color: var(--secondary-color);
+  border-radius: 16px;
+  color: #777;
+  margin-right: 4px;
+  margin-top:8px;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 12px;
+ 
+}
+
+/* === FORM === */
+
+input{
+  width:100%;
+  outline: none;
+  color: #555;
+  font-weight: bold;
+  font-size:18px;
+}
+
+input::placeholder{
+  font-size:14px;
+  font-weight: normal;
+}
+
+input[type="radio"]{
+  width:initial;
+  margin-right: 4px;
+  cursor: pointer;
+}
+
+button[type="submit"],
+a.button {
+  width:100%;
+  padding: 8px 32px;
+  margin-top: 18px;
+  border-radius: 4px;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+a.button{
+  display: block;
+  text-align: center;
+  text-decoration:none;
+}
